@@ -20,7 +20,8 @@ export default defineConfig(({ isSsrBuild }) => ({
   },
   ssr: {
     target: "webworker",
-    noExternal: true,
+    // https://discord.com/channels/770287896669978684/770287896669978687/1316292263072235582
+    // noExternal: true,
     external: ["node:async_hooks"],
     resolve: {
       conditions: ["workerd", "browser"],
